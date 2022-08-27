@@ -28,7 +28,7 @@ def run(hjl):
 			addr = (str(ip),int(port))
 			for x in range(times):
 				s.sendto(data,addr)
-			print(i +" Sent Data! thread-"+str(hjl))
+			print(i +" Data Sent!")
 		except:
 			print("[!] Error!!!")
 
