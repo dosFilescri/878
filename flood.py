@@ -20,7 +20,7 @@ times = args['times']
 threads = args['threads']
 
 def run():
-	data = random._urandom(2048)
+	data = random._urandom(9999999)
 	i = random.choice(("[*]","[!]","[#]"))
 	while True:
 		try:
